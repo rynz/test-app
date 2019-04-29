@@ -4,6 +4,7 @@ cc_library(
     hdrs = ["app.h"],
     deps = [
         "@rynz_protocol//protocol",
+        "@magic//:magic",
     ],
 )
 

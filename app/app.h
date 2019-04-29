@@ -22,6 +22,9 @@ class App {
   // Example test, doesn't really do anything.
   inline std::string test() const { return protocol_.str(); }
 
+  // Test precompiled static lib
+  std::string Perform() const;
+
  private:
   // Clients can't invoke the constructor directly.
   App() = default;

@@ -17,6 +17,7 @@ TEST(AppTest, AppExample) {
   EXPECT_EQ(error_text, "");
   ASSERT_EQ(error, App::AppError::NONE);
   EXPECT_EQ(app->test(), "Test Example App");
+  EXPECT_EQ(app->Perform(), "Abracadabra!");
 }
 
 }  // namespace

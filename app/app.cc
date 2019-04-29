@@ -1,5 +1,7 @@
 #include "app/app.h"
 
+#include "magic/magic.h"
+
 namespace app {
 
 using std::string;
@@ -9,6 +11,11 @@ using std::string;
   std::unique_ptr<App> app(new App());
   *error = app->Init(error_text);
   return (*error == AppError::NONE) ? std::move(app) : nullptr;
+}
+
+std::string App::Perform() const {
+  magic::Magic magic;
+  return magic.Cast();
 }
 
 App::AppError App::Init(string* error_text) {

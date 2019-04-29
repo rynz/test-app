@@ -22,3 +22,10 @@ http_archive(
     strip_prefix = "test-protocol-master",
     urls = ["https://github.com/rynz/test-protocol/archive/master.zip"],
 )
+
+# Test Precompiled Static Library
+new_local_repository(
+    name = "magic",
+    build_file = "third_party/magic.BUILD",
+    path = "third_party/magic",
+)
